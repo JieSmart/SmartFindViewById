@@ -175,9 +175,7 @@ public class FindViewByIdCoder extends Simple {
     private String buildFindViewByIdStatement(@NotNull final ViewWidgetElement element) {
         StringBuilder findViewByIdCodeBuilder = new StringBuilder();
         findViewByIdCodeBuilder.append(element.getFieldName());
-        findViewByIdCodeBuilder.append(" = (");
-        findViewByIdCodeBuilder.append(element.getViewName());
-        findViewByIdCodeBuilder.append(") ");
+        findViewByIdCodeBuilder.append(" = ");
         findViewByIdCodeBuilder.append(mIsRootViewFind ? mRootViewName + "." : "");
         findViewByIdCodeBuilder.append("findViewById(");
         findViewByIdCodeBuilder.append(element.getFullViewId());
